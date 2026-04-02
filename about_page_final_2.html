@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+html, body { width: 1054px; height: 752px; overflow: hidden; background: #E8EDF2; }
+.page { width: 1054px; height: 752px; padding: 12px; display: flex; flex-direction: column; gap: 10px; }
+.disclaimer { background: #FAEEDA; border-radius: 6px; padding: 10px 14px; border-left: 4px solid #BA7517; flex-shrink: 0; }
+.disclaimer-title { font-size: 10px; font-weight: 700; color: #633806; margin-bottom: 3px; }
+.disclaimer-text { font-size: 8.5px; color: #854F0B; line-height: 1.6; }
+.middle-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; flex-shrink: 0; }
+.card { background: #F8F9FA; border-radius: 6px; padding: 12px; border: 0.5px solid #C8D0D8; }
+.card-title { font-size: 10px; font-weight: 700; color: #1B3A5C; border-bottom: 1.5px solid #1B3A5C; padding-bottom: 5px; margin-bottom: 8px; }
+.meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-top: 8px; }
+.meta-item { background: #E8EDF2; border-radius: 4px; padding: 5px 7px; }
+.meta-label { font-size: 7.5px; color: #5F5E5A; }
+.meta-value { font-size: 8.5px; font-weight: 600; color: #1B3A5C; margin-top: 1px; }
+.card-text { font-size: 8.5px; color: #444441; line-height: 1.6; }
+.tools { margin-top: 8px; padding-top: 7px; border-top: 0.5px solid #C8D0D8; }
+.tools-title { font-size: 8.5px; font-weight: 700; color: #1B3A5C; margin-bottom: 4px; }
+.tools-row { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+.tool-item { font-size: 7.5px; color: #5F5E5A; }
+.tool-item span { font-weight: 600; color: #1B3A5C; }
+.author-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.avatar { width: 40px; height: 40px; border-radius: 50%; background: #1B3A5C; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 11px; font-weight: 700; flex-shrink: 0; border: 2px solid #1D9E75; }
+.author-name { font-size: 11px; font-weight: 700; color: #1B3A5C; }
+.author-title { font-size: 8.5px; color: #1D9E75; font-weight: 600; margin-top: 2px; }
+.author-location { font-size: 7.5px; color: #5F5E5A; margin-top: 2px; }
+.exp-line { font-size: 9px; font-weight: 700; color: #1B3A5C; margin: 8px 0 6px 0; padding-top: 7px; border-top: 0.5px solid #C8D0D8; }
+.section-label { font-size: 8.5px; font-weight: 700; color: #1B3A5C; margin-bottom: 5px; }
+.tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.tag { background: #E6F1FB; color: #185FA5; font-size: 7.5px; padding: 2px 6px; border-radius: 3px; font-weight: 500; }
+.tag.green { background: #E1F5EE; color: #0F6E56; }
+.tag.amber { background: #FAEEDA; color: #854F0B; }
+.linkedin-row { display: flex; align-items: center; gap: 8px; margin-top: 8px; padding-top: 7px; border-top: 0.5px solid #C8D0D8; }
+.linkedin-btn { background: #0A66C2; color: #fff; font-size: 7.5px; padding: 4px 10px; border-radius: 3px; font-weight: 600; text-decoration: none; }
+.linkedin-url { font-size: 7.5px; color: #5F5E5A; }
+.terms-card { background: #F8F9FA; border-radius: 6px; padding: 12px; border: 0.5px solid #C8D0D8; flex: 1; min-height: 0; }
+.terms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 4px; }
+.term-row { display: flex; gap: 5px; align-items: flex-start; }
+.term-badge { background: #1B3A5C; color: #fff; font-size: 6.5px; padding: 2px 5px; border-radius: 2px; white-space: nowrap; margin-top: 1px; flex-shrink: 0; font-weight: 600; }
+.term-badge.green { background: #0F6E56; }
+.term-badge.amber { background: #854F0B; }
+.term-def { font-size: 7.5px; color: #444441; line-height: 1.4; }
+</style></head>
+<body>
+<div class="page">
+
+  <div class="disclaimer">
+    <p class="disclaimer-title">⚠ DISCLAIMER</p>
+    <p class="disclaimer-text">The data used in this dashboard is <strong>synthetic</strong> and created solely for portfolio and educational purposes. It does not represent actual sales figures, market share, or performance of any real brand, retailer, or company. Brand names (Oreo, Chips Ahoy, Keebler) are used for illustrative category structure only. Any resemblance to actual business data is coincidental. This project is not affiliated with or endorsed by Mondelez International, Keebler Company, NielsenIQ, IRI, or Circana.</p>
+  </div>
+
+  <div class="middle-row">
+
+    <div class="card">
+      <p class="card-title">Project Overview</p>
+      <p class="card-text">This dashboard analyzes the US Cookies & Biscuits category covering 4 brands (Oreo, Chips Ahoy, Keebler, Private Label) across 10 retailers and 5 channels for January 2022 — December 2023. Built using NielsenIQ-style syndicated data methodology to demonstrate CPG category management analytics comparable to IRI/Circana reporting standards.</p>
+      <div class="meta-grid">
+        <div class="meta-item"><p class="meta-label">Category</p><p class="meta-value">Cookies & Biscuits</p></div>
+        <div class="meta-item"><p class="meta-label">Market</p><p class="meta-value">US National</p></div>
+        <div class="meta-item"><p class="meta-label">Period</p><p class="meta-value">Jan 2022 — Dec 2023</p></div>
+        <div class="meta-item"><p class="meta-label">Data Type</p><p class="meta-value">Synthetic · NielsenIQ Style</p></div>
+        <div class="meta-item"><p class="meta-label">Brands</p><p class="meta-value">4 Brands · 50 SKUs</p></div>
+        <div class="meta-item"><p class="meta-label">Retailers</p><p class="meta-value">10 Retailers · 5 Channels</p></div>
+      </div>
+      <div class="tools">
+        <p class="tools-title">Tools & Technologies</p>
+        <div class="tools-row">
+          <p class="tool-item"><span>BI Tool:</span> Microsoft Power BI Desktop</p>
+          <p class="tool-item"><span>DAX:</span> Base · YA · Period · FSI Measures</p>
+          <p class="tool-item"><span>Model:</span> Star Schema · 5 Tables · 52K rows</p>
+          <p class="tool-item"><span>Pages:</span> 7 Dashboard Pages + About</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="card-title">About the Author</p>
+      <div class="author-row">
+        <div class="avatar">SSR</div>
+        <div>
+          <p class="author-name">Subhadeep Sinha Roy</p>
+          <p class="author-title">Sales & Retail Data Analyst | CPG & FMCG</p>
+          <p class="author-location">Schaumburg, Illinois, United States</p>
+        </div>
+      </div>
+      <p class="exp-line">10+ Years in CPG, Sales & Data Analytics</p>
+      <p class="section-label">Core Skills</p>
+      <div class="tags">
+        <span class="tag">Power BI</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Python</span>
+        <span class="tag">Excel</span>
+        <span class="tag green">CPG Analytics</span>
+        <span class="tag green">Category Management</span>
+        <span class="tag green">NielsenIQ / IRI</span>
+        <span class="tag green">POS Data</span>
+        <span class="tag amber">Trade Promotion</span>
+        <span class="tag amber">ACV / TDP / Velocity</span>
+        <span class="tag amber">Fair Share Index</span>
+        <span class="tag amber">Promo Lift Analytics</span>
+      </div>
+      <div class="linkedin-row">
+        <a class="linkedin-btn" href="https://www.linkedin.com/in/subhadeep-sinha-roy" target="_blank">View LinkedIn Profile</a>
+        <span class="linkedin-url">linkedin.com/in/subhadeep-sinha-roy</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="terms-card">
+    <p class="card-title">Key Terminology — 22 CPG Industry Terms Used in This Dashboard</p>
+    <div class="terms-grid">
+      <div class="term-row"><span class="term-badge">ACV</span><p class="term-def">All Commodity Volume — % of stores carrying a product weighted by each store's total sales volume</p></div>
+      <div class="term-row"><span class="term-badge">Numeric Distribution</span><p class="term-def">% of stores physically stocking the product on shelf — unweighted store count measure</p></div>
+      <div class="term-row"><span class="term-badge">TDP</span><p class="term-def">Total Distribution Points — ACV × Numeric Distribution — measures overall shelf presence intensity</p></div>
+      <div class="term-row"><span class="term-badge">Velocity</span><p class="term-def">$ per ACV — sales efficiency per point of distribution — measures how hard each shelf placement works</p></div>
+      <div class="term-row"><span class="term-badge green">FSI</span><p class="term-def">Fair Share Index — Brand $ Share ÷ ACV Distribution — above category avg means overperforming vs distribution</p></div>
+      <div class="term-row"><span class="term-badge">Market Share</span><p class="term-def">Brand $ Sales ÷ Total Category $ Sales — measures competitive position within the category</p></div>
+      <div class="term-row"><span class="term-badge">Baseline Sales</span><p class="term-def">Expected sales without any promotional activity — represents underlying demand at everyday shelf price</p></div>
+      <div class="term-row"><span class="term-badge">Incremental Sales</span><p class="term-def">Sales above baseline driven by promotional activity — the lift generated by a promotion event</p></div>
+      <div class="term-row"><span class="term-badge green">Promo Lift %</span><p class="term-def">Incremental ÷ Baseline — promotional efficiency · CPG benchmark is 15%+ for effective promotions</p></div>
+      <div class="term-row"><span class="term-badge">TPR</span><p class="term-def">Temporary Price Reduction — shelf price reduced without feature ad or display · lowest ROI promo type</p></div>
+      <div class="term-row"><span class="term-badge">Feature</span><p class="term-def">Brand in retailer weekly circular or digital ad — no price reduction required · drives awareness</p></div>
+      <div class="term-row"><span class="term-badge">Display</span><p class="term-def">In-store secondary display — end-cap or aisle interrupt placement · no price change required</p></div>
+      <div class="term-row"><span class="term-badge green">F&D</span><p class="term-def">Feature & Display — combined circular ad + in-store display · highest lift at 44.9% in this category</p></div>
+      <div class="term-row"><span class="term-badge">YA</span><p class="term-def">Year Ago — same period in the prior year · used for YoY performance comparison across all metrics</p></div>
+      <div class="term-row"><span class="term-badge">YoY</span><p class="term-def">Year Over Year — % change vs same period prior year · primary growth metric in CPG reporting</p></div>
+      <div class="term-row"><span class="term-badge amber">L4W/L13W/L52W</span><p class="term-def">Last 4 / 13 / 52 weeks rolling period — standard CPG reporting windows used by NielsenIQ & IRI</p></div>
+      <div class="term-row"><span class="term-badge">UPC</span><p class="term-def">Universal Product Code — unique 12-digit barcode identifying each individual SKU at item level</p></div>
+      <div class="term-row"><span class="term-badge">SKU</span><p class="term-def">Stock Keeping Unit — unique product variant defined by brand + flavor + pack size combination</p></div>
+      <div class="term-row"><span class="term-badge">Pack Size</span><p class="term-def">Product weight variant — 150g · 200g · 250g · 300g in this category · key velocity differentiator</p></div>
+      <div class="term-row"><span class="term-badge">Sub-Category</span><p class="term-def">Product grouping within Cookies — Sandwich · Chocolate Chip · Shortbread · Assorted Cookies</p></div>
+      <div class="term-row"><span class="term-badge">Category Sales</span><p class="term-def">Total $ sales across all brands — denominator for Market Share and Fair Share Index calculations</p></div>
+      <div class="term-row"><span class="term-badge">Star Schema</span><p class="term-def">Data model — one fact table (fact_sales) connected to 4 dim tables (product · retailer · date · promo)</p></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
